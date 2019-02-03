@@ -129,6 +129,10 @@ def exp(z):
     z = to_dual(z)
     return dual(math.exp(z.re), math.exp(z.re)*z.im)
 
+def log(z):
+    z = to_dual(z)
+    return dual(math.log(z.re), float(z.im)/z.re)
+
 def sin(z):
     z = to_dual(z)
     return dual(math.sin(z.re),math.cos(z.re)*z.im)
@@ -181,7 +185,7 @@ def test():
     print('x * y = {}'.format(x*y))
     print('x / y = {}'.format(x/y))
     print('sin(x) = {}'.format(sin(x)))
-    print('exp(x)*cos(y) = {}'.format(exp(x)*cos(y)))
+    print('exp(x)*log(y) = {}'.format(exp(x)*log(y)))
     print('tanh(sin(y)) = {}'.format(tanh(sin(y))))
     print('------------------------------')
     X = [i for i in range(3)]
