@@ -3,7 +3,6 @@
 '''
 
 import math
-import sys
 
 def is_dual(obj):
     return hasattr(obj,'re') and hasattr(obj,'im')
