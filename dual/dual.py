@@ -164,6 +164,10 @@ def tanh(z):
     return sinh(z)/cosh(z)
 
 
+def sqrt(z):
+    return z**0.5
+
+
 def test():
     print('Examples of dual module\n')
     a, b = 1, 2
